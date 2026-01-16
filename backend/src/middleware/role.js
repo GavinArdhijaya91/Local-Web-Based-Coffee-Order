@@ -1,0 +1,13 @@
+export function adminOnly(req, res, next) {
+  if (req.user.role !== "admin") {
+    return res.status(403).json({ message: "Admin only" });
+  }
+  next();
+}
+
+export function customerOnly(req, res, next) {
+  if (req.user.role !== "customer") {
+    return res.status(403).json({ message: "Customer only" });
+  }
+  next();
+}
