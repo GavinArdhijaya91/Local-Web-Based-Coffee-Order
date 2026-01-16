@@ -1,0 +1,149 @@
+:root {
+  --coffee-dark: #4b2e2b;
+  --coffee-medium: #6f4e37;
+  --coffee-light: #d2b48c;
+  --cream: #f7f3f0;
+  --latte: #ede4d9;
+  --accent: #c19a6b;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  padding: 24px;
+  background: linear-gradient(135deg, var(--cream), var(--latte));
+  color: var(--coffee-dark);
+}
+
+
+h2 {
+  text-align: center;
+  align-items: center;
+  margin-bottom: 98px;
+  color: var(--coffee-dark);
+  letter-spacing: 0.5px;
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(75, 46, 43, 0.15);
+}
+
+
+th {
+  background: linear-gradient(135deg, var(--coffee-medium), var(--coffee-dark));
+  color: #fff;
+  padding: 14px 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+
+td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+
+tbody tr:hover {
+  background: var(--latte);
+  transition: background 0.2s ease;
+}
+
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+
+img.thumb {
+  width: 90px;
+  height: 90px;
+  border-radius: 8px;
+  border: 2px solid var(--coffee-light);
+}
+
+
+.center {
+  text-align: center;
+}
+
+
+.muted {
+  color: #7a6a5e;
+  font-size: 13px;
+}
+
+
+.small {
+  font-size: 13px;
+  color: #5f4a42;
+}
+
+
+select {
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--coffee-light);
+  background: var(--cream);
+  color: var(--coffee-dark);
+  cursor: pointer;
+}
+
+select:hover {
+  border-color: var(--coffee-medium);
+}
+
+button {
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: none;
+  background: var(--coffee-medium);
+  color: #fff;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+button:hover {
+  background: var(--coffee-dark);
+}
+
+/* Responsif kawann */
+@media (max-width: 1024px) {
+ 
+  body > h2,
+  .admin-title,
+  .page-title {
+    font-size: 5rem;  
+    line-height: 1.15;
+    margin-bottom: 6rem;
+  }
+
+  table, table th, table td {
+    font-size: 1.3rem;
+    align-items: center;
+  }
+  table th, table td {
+    padding: 12px 14px;
+  }
+
+  .table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+  }
+  .table-wrapper table {
+    width: 100%;
+    min-width: 720px; 
+  }
+
+  select, button {
+    font-size: 0.98rem;
+    padding: 6px 8px;
+  }
+}
